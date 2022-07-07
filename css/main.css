@@ -52,7 +52,7 @@ li{
 .fa-li{
     color: var(--iconColor);
     width: 100%;
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
 }
 
 .fa-li:hover{
@@ -65,10 +65,16 @@ li{
     padding: 10px 20px;
     border-radius: 0.6em;
     font-family:  var(--roboto); 
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
     }
 
 .important_button:hover{
     background-color: var(--importantButtonHover);
 }
 
+#icon_of_page{
+    border-bottom: var(--iconColor) solid 2px;
+}
+span{
+    padding-bottom: 18px;
+}
