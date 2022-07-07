@@ -1,2 +1,2 @@
-# 7DIT-websiteDesign
-website for 7DIT external assesment
+# 7DIT-External
+External for 7DIT project management and website design
