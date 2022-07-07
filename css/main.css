@@ -1,4 +1,3 @@
-
 :root{ /* CSS variables */ 
     --iconColor: #1B4272;
     --importantButton: #019AFF;
@@ -38,9 +37,10 @@ a{
 
 }
 
+
 .navbarlogo{
     height: 100%;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 li{
@@ -57,24 +57,29 @@ li{
 
 .fa-li:hover{
     color: var(--importantButtonHover);
-  }
+}
+
+#icon_of_page{
+    border-bottom: var(--iconColor) solid 2px;
+}
+
+span{
+    padding-bottom: 18px;
+}
 
 .important_button{
     background-color: var(--importantButton);
-    margin: auto 10px;
-    padding: 10px 20px;
+    margin: auto 0;
+    margin-right: 5px;;
     border-radius: 0.6em;
     font-family:  var(--roboto); 
-    transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
     }
 
 .important_button:hover{
     background-color: var(--importantButtonHover);
 }
 
-#icon_of_page{
-    border-bottom: var(--iconColor) solid 2px;
-}
-span{
-    padding-bottom: 18px;
+#login{
+    padding: 10px 20px;
 }
