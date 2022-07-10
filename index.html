@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,50 +9,90 @@
     <link rel="stylesheet" href="css/main.css">
 
 </head>
-<body>
-    <div class="navbar">    <!--All content for the navigation bar-->
-        <div class="navbar_item">    <!--logo-->
-            <a href="index.html">
-                <img src="images/logotxt.png" alt="wakachat logo" class="navbarlogo">
-            </a>
+<header class="navbar">    <!--All content for the navigation bar-->
+    <div class="navbar_item">    <!--logo-->
+        <a href="index.html">
+            <img src="images/logotxt.png" alt="wakachat logo" class="navbarlogo">
+        </a>
+    </div>
+    <div class="navbar_item" id="icons"> <!--icons-->
+        <ul class="fa-ul"> <!-- 'fa' stands for FontAwesome. the icon library I'm using-->
+            <li>
+                <a href="index.html"> 
+                    <span class="fa-li" id="icon_of_page"> 
+                        <i class="fa-solid fa-house fa-xl"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <span class="fa-li">
+                        <i class="fa-solid fa-user fa-xl"></i>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="explore.html">
+                    <span class="fa-li">
+                        <i class="fa-solid fa-compass fa-xl"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar_item important_button" id="login"> <!--login button-->
+        <a href="incomplete.html">
+            <p>Log In</p>
+        </a>
+    </div>
+</header>
+<body> <!--where all the content is-->
+    <div id="home_body_content">
+        <div class="setting_box home_body_item">
+            <div id="setting_title">
+                <span> 
+                    <i class="fa-solid fa-gears fa-xl"></i>
+                </span>
+                <h1>Settings</h1>
+            </div>
+            <div id="setting_items">
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+                <p>item</p>
+            </div>
         </div>
-        <div class="navbar_item" id="icons"> <!--icons-->
-            <ul class="fa-ul"> <!-- 'fa' stands for FontAwesome. the icon library I'm using-->
-                <li>
-                    <a href="incomplete.html"> 
-                        <span class="fa-li"> 
-                            <i class="fa-solid fa-gears fa-xl"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html"> 
-                        <span class="fa-li" id="icon_of_page"> 
-                            <i class="fa-solid fa-house fa-xl"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="profile.html">
-                        <span class="fa-li">
-                            <i class="fa-solid fa-user fa-xl"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="explore.html">
-                        <span class="fa-li">
-                            <i class="fa-solid fa-compass fa-xl"></i>
-                        </span>
-                    </a>
-                </li>
-            </ul>
+        <div id="mini_profile_box" class="home_body_item">
+            <img src="" alt="your profile image">                                                     <!--PLACEHOLDER-->
+            <h4>profileName</h4>
+            <div class="post_something">
+                <h4>Post Something!</h>
+                <h1 class=important_button>+</h1>
+
+            </div>
         </div>
-        <div class="navbar_item important_button"> <!--login button-->
-            <a href="incomplete.html">
-                <p id="login">Log In</p>
-            </a>
+        <div id="suggest_box" class="home_body_item">
+            <h1>You Might Like</h1>
+            
+            
+        </div>
+        <div id="post_box" class="home_body_item">
+            
         </div>
     </div>
 </body>
+<footer>
+
+</footer>
 </html>
