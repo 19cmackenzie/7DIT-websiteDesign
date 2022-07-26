@@ -29,6 +29,17 @@ a{
     color:white;
 }
 
+.important_button{
+    background-color: var(--importantButton);
+    border-radius: 0.6em;
+    transition: background-color 0.5s ease;
+    color: white;
+    }
+
+.important_button:hover{
+    background-color: var(--importantButtonHover);
+}
+
 /* NAVBAR CSS */
 .navbar{ 
     height:45px;
@@ -64,44 +75,46 @@ li{
     border-bottom: var(--iconColor) solid 2px;
 }
 
-span{
-    padding-bottom: 18px;
-}
-
-.important_button{
-    background-color: var(--importantButton);
-    border-radius: 0.6em;
-    transition: background-color 0.5s ease;
-    color: white;
-    }
-
-.important_button:hover{
-    background-color: var(--importantButtonHover);
+.navbar span{
+    padding-bottom: 1em;
 }
 
 #login{
     padding: 0.6em 1.2em;
     margin: auto 0.5em auto 0;
 }
-/* BODY CSS */
+/*  HOMEPAGE BODY CSS */
 #home_body_content{
-    margin: 1em auto;
-    max-width: 1000px;
+    padding: 2em;
+    margin: auto 20%;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
 }
 
-.home_body_item{
+.content_item{
     border-radius: 0.5em;
     border: solid var(--lightGray) 0.1em;
+    padding: 2em;
 }
 
-.setting_box{
-    grid-row: 1/3;
-
+.mini_profile_box{
+    display: inline-flex;
+    margin-bottom: 2em;
 }
-#setting_title{
-    color:var(--iconColor);
-    display:inline-flex;
+/*  PROFILE BODY CSS */
+#profile_body_content{
+    margin: auto 20%;
 }
-
+.profile_item{
+    margin: 0 10%;
+}
+#profile_info{
+   display: inline-flex;
+   
+}
+#profile_image{
+    display: inline-flex;
+    margin: auto 0;
+}

@@ -48,14 +48,9 @@
 </header>
 <body> <!--where all the content is-->
     <div id="home_body_content">
-        <div class="setting_box home_body_item">
-            <div id="setting_title">
-                <span> 
-                    <i class="fa-solid fa-gears fa-xl"></i>
-                </span>
-                <h1>Settings</h1>
-            </div>
-            <div id="setting_items">
+        <div class="setting_box content_item">
+            <h1 id="setting_title">Settings</h1>
+            <div id="setting_items">    <!--Settings box-->
                 <p>item</p>
                 <p>item</p>
                 <p>item</p>
@@ -73,23 +68,58 @@
                 <p>item</p>
             </div>
         </div>
-        <div id="mini_profile_box" class="home_body_item">
-            <img src="" alt="your profile image">                                                     <!--PLACEHOLDER-->
-            <h4>profileName</h4>
-            <div class="post_something">
-                <h4>Post Something!</h>
-                <h1 class=important_button>+</h1>
-
+        <div class="home_body_content"> <!--Mini-profile and posts-->
+            <div class="mini_profile_box content_item">
+                <div class="mini_profile_content" id="profile_image">
+                    <img src="" alt="your profile image">                                                     <!--PLACEHOLDER-->
+                    <h4>profileName</h4>
+                </div>
+                <div class="mini_profile_content">
+                    <h4>Post Something!</h4>
+                        <i class="fa-solid fa-circle-plus"></i>
+                </div>
+            </div>
+            <div class="content_item post_box">
+                <div id="post">
+                    <div id="post_title">
+                        <img src="" alt="profile image of person who posted">                                   <!--PLACEHOLDER-->
+                    </div>
+                    <div id="post_img">
+                        <img src="" alt="Image of the post">                                                    <!--PLACEHOLDER-->
+                    </div>
+                    <div idww="post_caption">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed labore amet temporibus ea, libero expedita ex, inventore aspernatur explicabo doloribus nulla voluptate sit. Eligendi officiis non, illo obcaecati provident odio.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="suggest_box" class="home_body_item">
+        
+        <div class="content_item suggest_box">
             <h1>You Might Like</h1>
-            
-            
+            <div id="suggest_scroll_area">
+                <div class="suggest_user">
+                    <img src="" alt="user image of username">
+                    <h4>username</h4>
+                </div>
+                <div class="suggest_user">
+                    <img src="" alt="user image of username">
+                    <h4>username</h4>
+                </div>
+                <div class="suggest_user">
+                    <img src="" alt="user image of username">
+                    <h4>username</h4>
+                </div>
+                <div class="suggest_user">
+                    <img src="" alt="user image of username">
+                    <h4>username</h4>
+                </div>
+                <div class="suggest_user">
+                    <img src="" alt="user image of username">
+                    <h4>username</h4>
+                </div>
+            </div>
         </div>
-        <div id="post_box" class="home_body_item">
-            
-        </div>
+        
     </div>
 </body>
 <footer>
