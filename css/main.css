@@ -2,7 +2,7 @@
     --iconColor: #1B4272;
     --importantButton: #019AFF;
     --importantButtonHover:#007dd0;
-    --highlightColor: #7CB517;
+    --whiteSpace: 20%;
     --lightGray: #E6E6E6;
     --roboto: 
         -apple-system, 
@@ -21,7 +21,6 @@
     margin:0;
     padding:0;
     font-family:  var(--roboto); 
-    
 }
 
 a{
@@ -34,7 +33,7 @@ a{
     border-radius: 0.6em;
     transition: background-color 0.5s ease;
     color: white;
-    }
+}
 
 .important_button:hover{
     background-color: var(--importantButtonHover);
@@ -42,12 +41,13 @@ a{
 
 /* NAVBAR CSS */
 .navbar{ 
-    height:45px;
+    height:3em;
     display:inline-flex;
     width: 100%;
-    border-bottom: solid var(--lightGray) 1px;
+    border-bottom: solid var(--lightGray) 0.1em;
     justify-content: space-between;
-    padding-bottom:0.5em;
+    margin-bottom: 2em;
+
 }
 
 .navbarlogo{
@@ -58,7 +58,6 @@ a{
 li{
     padding: 20px 30px;
     display:inline-flex;
-
 }
 
 .fa-li{
@@ -85,8 +84,7 @@ li{
 }
 /*  HOMEPAGE BODY CSS */
 #home_body_content{
-    padding: 2em;
-    margin: auto 20%;
+    margin: auto var(--whiteSpace);
     display: grid;
     grid-gap: 2em;
     grid-template-columns: 1fr 2fr 1fr;
@@ -103,18 +101,41 @@ li{
     display: inline-flex;
     margin-bottom: 2em;
 }
-/*  PROFILE BODY CSS */
+
+@media only screen and (max-width: 750px) {
+    .setting_box{
+        display:none;
+    }
+}
+
+/*  PROFILEAGE BODY CSS */
 #profile_body_content{
-    margin: auto 20%;
+    margin: auto var(--whiteSpace);
 }
 .profile_item{
     margin: 0 10%;
 }
 #profile_info{
    display: inline-flex;
+   margin-bottom:2em;
    
 }
 #profile_image{
     display: inline-flex;
     margin: auto 0;
+}
+/*  EXPLOREPAGE BODY CSS */
+#explore_body_content{
+    margin: auto var(--whiteSpace);
+}
+#explore_library{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, );
+    grid-gap:0.5em;
+}
+#explore_body_content img{
+   border: pink solid 0.1em;
+   border-radius: 0.2em;
+   padding:4em;
 }
