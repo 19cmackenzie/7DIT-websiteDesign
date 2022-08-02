@@ -3,6 +3,7 @@
     --importantButton: #019AFF;
     --importantButtonHover:#007dd0;
     --whiteSpace: 20%;
+    --paddingSpace: 2em;
     --lightGray: #E6E6E6;
     --roboto: 
         -apple-system, 
@@ -46,7 +47,7 @@ a{
     width: 100%;
     border-bottom: solid var(--lightGray) 0.1em;
     justify-content: space-between;
-    margin-bottom: 2em;
+    margin-bottom: var(--paddingSpace);
 
 }
 
@@ -86,7 +87,8 @@ li{
 #home_body_content{
     margin: auto var(--whiteSpace);
     display: grid;
-    grid-gap: 2em;
+    grid-row-gap: var(--paddingSpace);
+    grid-column-gap: var(--paddingSpace);
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: center;
 }
@@ -94,12 +96,13 @@ li{
 .content_item{
     border-radius: 0.5em;
     border: solid var(--lightGray) 0.1em;
-    padding: 2em;
+    padding: var(--paddingSpace);
+    width: 100%;
 }
 
 .mini_profile_box{
     display: inline-flex;
-    margin-bottom: 2em;
+    margin-bottom: var(--paddingSpace);
 }
 
 @media only screen and (max-width: 750px) {
@@ -108,21 +111,33 @@ li{
     }
 }
 
-/*  PROFILEAGE BODY CSS */
+/*  PROFILEPAGE BODY CSS */
 #profile_body_content{
     margin: auto var(--whiteSpace);
+
 }
-.profile_item{
-    margin: 0 10%;
-}
+
 #profile_info{
    display: inline-flex;
-   margin-bottom:2em;
+   margin-bottom: var(--paddingSpace);
+   justify-content: space-around;
    
 }
+
 #profile_image{
     display: inline-flex;
     margin: auto 0;
+
+}
+
+#profile_image img{
+    border: pink 0.1em solid;
+}
+
+#friends_counter h4, #friends_counter p{
+    text-align: center;
+    
+    
 }
 /*  EXPLOREPAGE BODY CSS */
 #explore_body_content{
@@ -131,11 +146,26 @@ li{
 #explore_library{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, );
-    grid-gap:0.5em;
+    grid-template-rows: repeat(12, 1fr);
+    grid-auto-flow: row;
+    grid-gap: 0.5em;
 }
 #explore_body_content img{
    border: pink solid 0.1em;
    border-radius: 0.2em;
    padding:4em;
+}
+.big_pic{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.search_icon{
+    margin:1em;
+    
+}
+#search_bar .content_item{
+    padding:1em;
+}
+#search_bar{  
+    display: inline-flex;
 }
