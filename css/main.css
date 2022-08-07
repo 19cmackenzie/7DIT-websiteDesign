@@ -53,9 +53,26 @@ img{
 }
 
 .image_library img{
-    height: 20em;
+    height: 10em;
     border-radius: 0.3em;
+    transition: opacity 0.5s ease;
    
+}
+.image_library img:hover{
+    opacity:0.4;
+    
+   
+}
+
+.fa-circle-plus{
+    color: var(--importantButton);
+    transition: color 0.5s ease;
+}
+.fa-circle-plus:hover{
+    color: var(--importantButtonHover);
+}
+.fa-2xl{
+    font-size: 5em;
 }
 
 /* NAVBAR CSS */
@@ -81,7 +98,6 @@ li{
 
 .fa-li{
     color: var(--iconColor);
-    width: 100%;
     transition: color 0.5s ease;
 }
 
@@ -104,10 +120,7 @@ li{
 /*  HOMEPAGE BODY CSS */
 #home_body_content{
     margin: auto var(--whiteSpace);
-    display: grid;
-    grid-row-gap: var(--paddingSpace);
-    grid-column-gap: var(--paddingSpace);
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
     justify-content: center;
 }
 
@@ -116,11 +129,37 @@ li{
     border: solid var(--lightGray) 0.1em;
     padding: var(--paddingSpace);
     width: 100%;
+    box-shadow: 
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
 
 .mini_profile_box{
     display: inline-flex;
     margin-bottom: var(--paddingSpace);
+    text-align: center;
+}
+#post_something h4{
+    margin-bottom: 3em;
+}
+#post_something{
+    margin: 0 auto;
+}
+.suggest_user img{
+    height:7em;
+    width:7em;
+    border-radius: 100em;
+    margin:0.5em;
+}
+
+.suggest_user{
+    text-align: center;
+}
+
+.post_title img{
+    width:2em;
+    height:2em;
 }
 
 @media only screen and (max-width: 750px) {
@@ -144,7 +183,6 @@ li{
 }
 
 .profile_image{
-    display: inline-flex;
     margin: auto 0;
 
 }
@@ -157,10 +195,12 @@ li{
 }
 .profile_item, .profile_item h4{
     margin: auto 0;
+    text-align: center;
 }
 
-#friends_counter h4, #friends_counter p{
-    text-align: center;
+#make_post h2{
+    padding:0.2em;
+    margin:1em;
 }
 
 /*  EXPLOREPAGE BODY CSS */
@@ -181,4 +221,9 @@ li{
 }
 #search_bar{  
     display: inline-flex;
+    width:100%;
+    margin-bottom: 2em;
+}
+.fa-magnifying-glass{
+    color:var(--iconColor)
 }
