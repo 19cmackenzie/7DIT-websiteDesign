@@ -140,12 +140,15 @@ li{
     margin-bottom: var(--paddingSpace);
     text-align: center;
 }
+
 #post_something h4{
     margin-bottom: 3em;
 }
+
 #post_something{
     margin: 0 auto;
 }
+
 .suggest_user img{
     height:7em;
     width:7em;
@@ -160,6 +163,16 @@ li{
 .post_title img{
     width:2em;
     height:2em;
+    border-radius: 100em;
+}
+.post_img img{
+    width: 25em;
+    height:25em;
+
+}
+
+#setting_items p{
+    padding:0.5em 0;
 }
 
 @media only screen and (max-width: 750px) {
@@ -212,18 +225,22 @@ li{
 .big_pic{
     grid-column: span 2;
 }
+
 .search_icon{
     margin:1em;
     
 }
+
 #search_bar .content_item{
     padding:1em;
 }
+
 #search_bar{  
     display: inline-flex;
     width:100%;
     margin-bottom: 2em;
 }
+
 .fa-magnifying-glass{
     color:var(--iconColor)
 }
