@@ -17,41 +17,41 @@
         'Helvetica Neue', 
         sans-serif; /* in-built font (roboto) */
 }
+
+
+
+
+
+
 /* GENERAL CSS */
 *{
     margin:0;
     padding:0;
     font-family:  var(--roboto); 
 }
-
 a{
     text-decoration: none;
     color:white;
 }
-
 .important_button{
     background-color: var(--importantButton);
     border-radius: 0.6em;
     transition: background-color 0.5s ease;
     color: white;
 }
-
 .important_button:hover{
     background-color: var(--importantButtonHover);
 }
-
 img{
     object-fit: cover;
     width:100%;
     height:100%;
 }
-
 .image_library{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.5em;
 }
-
 .image_library img{
     height: 10em;
     border-radius: 0.3em;
@@ -63,7 +63,6 @@ img{
     
    
 }
-
 .fa-circle-plus{
     color: var(--importantButton);
     transition: color 0.5s ease;
@@ -74,6 +73,21 @@ img{
 .fa-2xl{
     font-size: 5em;
 }
+.content_item{
+    border-radius: 0.5em;
+    border: solid var(--lightGray) 0.1em;
+    padding: var(--paddingSpace);
+    width: 100%;
+    box-shadow: 
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
 
 /* NAVBAR CSS */
 .navbar{ 
@@ -83,83 +97,65 @@ img{
     border-bottom: solid var(--lightGray) 0.1em;
     justify-content: space-between;
     margin-bottom: var(--paddingSpace);
-
 }
-
 .navbarlogo{
-    height: 100%;
+    height: 3em;
     padding: 0 5px;
 }
-
 li{
     padding: 20px 30px;
     display:inline-flex;
 }
-
 .fa-li{
     color: var(--iconColor);
     transition: color 0.5s ease;
+    justify-content: center;
+    text-align: center;
 }
-
 .fa-li:hover{
     color: var(--importantButtonHover);
 }
-
 #icon_of_page{
     border-bottom: var(--iconColor) solid 2px;
 }
-
 .navbar span{
     padding-bottom: 1em;
 }
-
 #login{
-    padding: 0.6em 1.2em;
+    padding: 0.6em 1em;
     margin: auto 0.5em auto 0;
 }
+
+
+
+
+
+
+
 /*  HOMEPAGE BODY CSS */
 #home_body_content{
     margin: auto var(--whiteSpace);
     display: flex;
     justify-content: center;
 }
-
-.content_item{
-    border-radius: 0.5em;
-    border: solid var(--lightGray) 0.1em;
-    padding: var(--paddingSpace);
-    width: 100%;
-    box-shadow: 
-        0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
+#home_grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20% 45%;
+    grid-column-gap: 6em;
+    grid-row-gap: 2em;
 }
-
 .mini_profile_box{
     display: inline-flex;
-    margin-bottom: var(--paddingSpace);
     text-align: center;
 }
-
 #post_something h4{
     margin-bottom: 3em;
 }
-
 #post_something{
-    margin: 0 auto;
+    margin: 2em auto 0 0;
+    transition: margin 0.5s;
 }
-
-.suggest_user img{
-    height:7em;
-    width:7em;
-    border-radius: 100em;
-    margin:0.5em;
-}
-
-.suggest_user{
-    text-align: center;
-}
-
 .post_title img{
     width:2em;
     height:2em;
@@ -168,18 +164,55 @@ li{
 .post_img img{
     width: 25em;
     height:25em;
-
 }
-
+.post_title{
+    display: inline-flex;
+}
 #setting_items p{
     padding:0.5em 0;
+    transition: all 0.5 ease;
 }
+#setting_items p:hover{
+    border-bottom:0.05em solid black;
+}
+.setting_box{
+    height:40em;
+    margin-right: 2em;
+}
+.suggest_box{
+    grid-row: span 2;
 
-@media only screen and (max-width: 750px) {
+    
+}
+.suggest_user img{
+    height:7em;
+    width:7em;
+    border-radius: 100em;
+    margin:0.5em;
+}
+.suggest_user{
+    text-align: center;
+}
+}
+@media only screen and (max-width: 100em) {
     .setting_box{
         display:none;
     }
+    #home_body_content{
+        display: block;
+    }
+   
 }
+@media only screen and (max-width: 40em) {
+    #post_something{
+        margin: 0 auto;
+    }
+    
+}
+
+
+
+
 
 /*  PROFILEPAGE BODY CSS */
 #profile_body_content{
@@ -187,14 +220,12 @@ li{
     justify-content: center;
 
 }
-
 #profile_info{
    display: inline-flex;
    margin-bottom: var(--paddingSpace);
    justify-content: space-around;
    
 }
-
 .profile_image{
     margin: auto 0;
 
@@ -203,44 +234,76 @@ li{
     border: var(--lightGray) solid 0.3em;
     border-radius: 20em;
     height:10em;
-    margin: 0.5em;
     width:10em;
+    margin: 0.5em;
+    transition: width 0.5s, height 0.5s;
+
 }
 .profile_item, .profile_item h4{
-    margin: auto 0;
+    margin: auto;
     text-align: center;
 }
-
 #make_post h2{
     padding:0.2em;
     margin:1em;
 }
+@media only screen and (max-width: 40em) {
+    .profile_image img{
+        height:5em;
+        width:5em;
+        border: var(--lightGray) solid 0.1em;
+    }
+    #profile_posts{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+    }
+}
 
-/*  EXPLOREPAGE BODY CSS */
+
+
+
+
+/* EXPLOREPAGE BODY CSS */
 #explore_body_content{
     margin: auto var(--whiteSpace);
     justify-content: center;
 }
-
 .big_pic{
     grid-column: span 2;
 }
-
 .search_icon{
     margin:1em;
     
 }
-
 #search_bar .content_item{
     padding:1em;
 }
-
 #search_bar{  
     display: inline-flex;
     width:100%;
     margin-bottom: 2em;
 }
-
 .fa-magnifying-glass{
     color:var(--iconColor)
+}
+@media only screen and (max-width: 60em) {
+    .big_pic{
+        grid-column: span 1;
+    }
+    .image_library{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+    }
+}
+@media only screen and (max-width: 40em) {
+    .big_pic{
+        grid-column: span 1;
+    }
+    .image_library{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+    }
 }
