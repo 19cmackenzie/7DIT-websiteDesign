@@ -135,8 +135,11 @@ li{
 /*  HOMEPAGE BODY CSS */
 #home_body_content{
     margin: auto var(--whiteSpace);
+    padding-right: 4em;
     display: flex;
     justify-content: center;
+    
+    
 }
 #home_grid{
     display:grid;
@@ -144,10 +147,13 @@ li{
     grid-template-rows: 20% 45%;
     grid-column-gap: 6em;
     grid-row-gap: 2em;
+    justify-content: center;
 }
 .mini_profile_box{
     display: inline-flex;
     text-align: center;
+    min-width: 30em;
+    width:100%
 }
 #post_something h4{
     margin-bottom: 3em;
@@ -161,8 +167,8 @@ li{
     height:2em;
     border-radius: 100em;
 }
-.post_img img{
-    width: 25em;
+.post_img{
+    width: 100%;
     height:25em;
 }
 .post_title{
@@ -181,8 +187,7 @@ li{
 }
 .suggest_box{
     grid-row: span 2;
-
-    
+    max-width: 15em;
 }
 .suggest_user img{
     height:7em;
@@ -193,8 +198,7 @@ li{
 .suggest_user{
     text-align: center;
 }
-}
-@media only screen and (max-width: 100em) {
+@media only screen and (max-width: 75em) {
     .setting_box{
         display:none;
     }
@@ -202,6 +206,21 @@ li{
         display: block;
     }
    
+}
+@media only screen and (max-width: 60em) {
+    #home_grid{
+        display: block;
+    }
+    #suggest_scroll_area, .suggest_box{
+        display: inline-flex;
+    }
+    .suggest_box{
+        margin: 2em 0;
+        max-width: 100em;
+    }
+    #home_body_content{
+        margin: auto 1%;
+    }
 }
 @media only screen and (max-width: 40em) {
     #post_something{
@@ -214,10 +233,12 @@ li{
 
 
 
+
 /*  PROFILEPAGE BODY CSS */
 #profile_body_content{
     margin: auto var(--whiteSpace);
-    justify-content: center;
+    padding-right: 4em;
+    justify-content:center;
 
 }
 #profile_info{
@@ -244,14 +265,48 @@ li{
     text-align: center;
 }
 #make_post h2{
-    padding:0.2em;
+    padding:0.2em 1em;
     margin:1em;
 }
-@media only screen and (max-width: 40em) {
+.modal_button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+.modal{
+    display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 48em) {
     .profile_image img{
         height:5em;
         width:5em;
         border: var(--lightGray) solid 0.1em;
+    }
+    .profile_image{
+        margin-bottom: 0.5em;
+    }
+    #profile_info{
+        display: block;
     }
     #profile_posts{
         display:grid;
@@ -268,6 +323,7 @@ li{
 #explore_body_content{
     margin: auto var(--whiteSpace);
     justify-content: center;
+    padding-right: 4em;
 }
 .big_pic{
     grid-column: span 2;
