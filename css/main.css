@@ -1,4 +1,4 @@
-:root{ /* CSS variables */ 
+:root { /* CSS variables */ 
     --iconColor: #1B4272;
     --importantButton: #019AFF;
     --importantButtonHover:#007dd0;
@@ -24,56 +24,57 @@
 
 
 /* GENERAL CSS */
-*{
+* {
     margin:0;
     padding:0;
     font-family:  var(--roboto); 
 }
-a{
+a {
     text-decoration: none;
     color:white;
 }
-.important_button{
+.important_button {
     background-color: var(--importantButton);
     border-radius: 0.6em;
     transition: background-color 0.5s ease;
     color: white;
 }
-.important_button:hover{
+.important_button:hover {
     background-color: var(--importantButtonHover);
 }
-img{
+img {
     object-fit: cover;
     width:100%;
     height:100%;
 }
-.image_library{
+.image_library {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.5em;
 }
-.image_library img{
+.image_library img {
     height: 10em;
     border-radius: 0.3em;
     transition: opacity 0.5s ease;
+    cursor: pointer;
    
 }
-.image_library img:hover{
+.image_library img:hover {
     opacity:0.4;
     
    
 }
-.fa-circle-plus{
+.fa-circle-plus {
     color: var(--importantButton);
     transition: color 0.5s ease;
 }
-.fa-circle-plus:hover{
+.fa-circle-plus:hover {
     color: var(--importantButtonHover);
 }
-.fa-2xl{
+.fa-2xl {
     font-size: 5em;
 }
-.content_item{
+.content_item {
     border-radius: 0.5em;
     border: solid var(--lightGray) 0.1em;
     padding: var(--paddingSpace);
@@ -90,7 +91,7 @@ img{
 
 
 /* NAVBAR CSS */
-.navbar{ 
+.navbar { 
     height:3em;
     display:inline-flex;
     width: 100%;
@@ -98,30 +99,30 @@ img{
     justify-content: space-between;
     margin-bottom: var(--paddingSpace);
 }
-.navbarlogo{
+.navbarlogo {
     height: 3em;
     padding: 0 5px;
 }
-li{
+li {
     padding: 20px 30px;
     display:inline-flex;
 }
-.fa-li{
+.fa-li {
     color: var(--iconColor);
     transition: color 0.5s ease;
     justify-content: center;
     text-align: center;
 }
-.fa-li:hover{
+.fa-li:hover {
     color: var(--importantButtonHover);
 }
-#icon_of_page{
+#icon_of_page {
     border-bottom: var(--iconColor) solid 2px;
 }
-.navbar span{
+.navbar span {
     padding-bottom: 1em;
 }
-#login{
+#login {
     padding: 0.6em 1em;
     margin: auto 0.5em auto 0;
 }
@@ -133,15 +134,13 @@ li{
 
 
 /*  HOMEPAGE BODY CSS */
-#home_body_content{
+#home_body_content {
     margin: auto var(--whiteSpace);
     padding-right: 4em;
     display: flex;
     justify-content: center;
-    
-    
 }
-#home_grid{
+#home_grid {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20% 45%;
@@ -149,81 +148,80 @@ li{
     grid-row-gap: 2em;
     justify-content: center;
 }
-.mini_profile_box{
+.mini_profile_box {
     display: inline-flex;
     text-align: center;
     min-width: 30em;
     width:100%
 }
-#post_something h4{
+#post_something h4 {
     margin-bottom: 3em;
 }
-#post_something{
+#post_something {
     margin: 2em auto 0 0;
     transition: margin 0.5s;
 }
-.post_title img{
+.post_title img {
     width:2em;
     height:2em;
     border-radius: 100em;
 }
-.post_img{
-    width: 100%;
+.post_img {
     height:25em;
 }
-.post_title{
+.post_title {
     display: inline-flex;
 }
-#setting_items p{
+#setting_items p {
     padding:0.5em 0;
     transition: all 0.5 ease;
 }
-#setting_items p:hover{
+#setting_items p:hover {
     border-bottom:0.05em solid black;
 }
-.setting_box{
+.setting_box {
     height:40em;
     margin-right: 2em;
 }
-.suggest_box{
+.suggest_box {
     grid-row: span 2;
     max-width: 15em;
 }
-.suggest_user img{
+.suggest_user img {
     height:7em;
     width:7em;
     border-radius: 100em;
     margin:0.5em;
 }
-.suggest_user{
+.suggest_user {
     text-align: center;
 }
 @media only screen and (max-width: 75em) {
-    .setting_box{
+    .setting_box {
         display:none;
     }
-    #home_body_content{
+    #home_body_content {
         display: block;
     }
    
 }
 @media only screen and (max-width: 60em) {
-    #home_grid{
+    #home_grid {
         display: block;
     }
-    #suggest_scroll_area, .suggest_box{
+    #suggest_scroll_area, .suggest_box {
         display: inline-flex;
     }
-    .suggest_box{
+    .suggest_box {
         margin: 2em 0;
         max-width: 100em;
     }
-    #home_body_content{
+    #home_body_content {
         margin: auto 1%;
     }
 }
 @media only screen and (max-width: 40em) {
-    #post_something{
+    #post_something {
         margin: 0 auto;
     }
     
@@ -235,23 +233,23 @@ li{
 
 
 /*  PROFILEPAGE BODY CSS */
-#profile_body_content{
+#profile_body_content {
     margin: auto var(--whiteSpace);
     padding-right: 4em;
     justify-content:center;
 
 }
-#profile_info{
+#profile_info {
    display: inline-flex;
    margin-bottom: var(--paddingSpace);
    justify-content: space-around;
    
 }
-.profile_image{
+.profile_image {
     margin: auto 0;
 
 }
-.profile_image img{
+.profile_image img {
     border: var(--lightGray) solid 0.3em;
     border-radius: 20em;
     height:10em;
@@ -260,55 +258,27 @@ li{
     transition: width 0.5s, height 0.5s;
 
 }
-.profile_item, .profile_item h4{
+.profile_item, .profile_item h4 {
     margin: auto;
     text-align: center;
 }
-#make_post h2{
+#make_post h2 {
     padding:0.2em 1em;
     margin:1em;
 }
-.modal_button{
-    padding: 0;
-    border: none;
-    background: none;
-}
-.modal{
-    display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-}
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover, .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 @media only screen and (max-width: 48em) {
-    .profile_image img{
+    .profile_image img {
         height:5em;
         width:5em;
         border: var(--lightGray) solid 0.1em;
     }
-    .profile_image{
+    .profile_image {
         margin-bottom: 0.5em;
     }
-    #profile_info{
+    #profile_info {
         display: block;
     }
-    #profile_posts{
+    #profile_posts {
         display:grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0.5em;
@@ -320,46 +290,112 @@ li{
 
 
 /* EXPLOREPAGE BODY CSS */
-#explore_body_content{
+#explore_body_content {
     margin: auto var(--whiteSpace);
     justify-content: center;
     padding-right: 4em;
 }
-.big_pic{
+.big_pic {
     grid-column: span 2;
 }
-.search_icon{
+.search_icon {
     margin:1em;
     
 }
-#search_bar .content_item{
+#search_bar .content_item {
     padding:1em;
 }
-#search_bar{  
+#search_bar {  
     display: inline-flex;
     width:100%;
     margin-bottom: 2em;
 }
-.fa-magnifying-glass{
+.fa-magnifying-glass {
     color:var(--iconColor)
 }
 @media only screen and (max-width: 60em) {
     .big_pic{
         grid-column: span 1;
     }
-    .image_library{
+    .image_library {
         display:grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0.5em;
     }
 }
 @media only screen and (max-width: 40em) {
-    .big_pic{
+    .big_pic {
         grid-column: span 1;
     }
-    .image_library{
+    .image_library {
         display:grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0.5em;
     }
+}
+
+/* MODALS */
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; 
+height: 100%; 
+background-color: rgb(0,0,0); 
+background-color: rgba(0,0,0,0.9);
+}
+
+
+.modal-content {
+margin: auto;
+display: block;
+width: 80%;
+height:80%;
+max-width: 700px;
+}
+
+
+
+.modal-content{
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+from {transform:scale(0)}
+to {transform:scale(1)}
+}
+
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: var(--importantButton);
+font-size: 40px;
+font-weight: bold;
+transition: 0.1s;
+} 
+.close:hover,
+.close:focus {
+color: var(--importantButtonHover);
+text-decoration: none;
+cursor: pointer;
+}
+@media only screen and (max-width: 700px){
+.modal-content {
+    width: 100%;
+}
 }
