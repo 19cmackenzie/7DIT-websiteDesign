@@ -1,10 +1,11 @@
-:root { /* CSS variables */ 
+:root { 
+    /* CSS variables*/ 
     --iconColor: #1B4272;
     --importantButton: #019AFF;
-    --importantButtonHover:#007dd0;
+    --importantButtonHover: #007dd0;
     --whiteSpace: 20%;
     --paddingSpace: 2em;
-    --borderColor: #E6E6E6;
+    --border: solid 0.1em #E6E6E6;
     --roboto: 
         -apple-system, 
         BlinkMacSystemFont, 
@@ -15,226 +16,252 @@
         Cantarell, 
         'Open Sans', 
         'Helvetica Neue', 
-        sans-serif; /* in-built font (roboto) */
+        sans-serif;
     --boxShading:
         0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
-
-
-
-
-/* GENERAL CSS */
+/*GENERAL CSS */
 * {
-    margin:0;
-    padding:0;
-    font-family:  var(--roboto); 
+    margin: 0;
+    padding: 0;
+    font-family: var(--roboto); 
 }
 
 a {
     text-decoration: none;
     color: black;
 }
-#login a{
+
+#login a {
     color: white;
 }
-.important_button {
+/*customises any text classed as "important button" a bright blue background and hover effects. only works on text.*/
+.important-button {
     background-color: var(--importantButton);
     border-radius: 0.6em;
     transition: background-color 0.5s ease;
     color: white;
 }
-.important_button:hover {
+
+.important-button:hover {
     background-color: var(--importantButtonHover);
 }
+
 img {
     object-fit: cover;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
-.image_library {
-    display:grid;
+
+/*Grid CSS for any container classed as an image library (e.g: library in explore.html*/
+.image-library {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.5em;
     overflow: scroll;
 }
-.image_library img {
+
+.image-library img {
     height: 10em;
     border-radius: 0.3em;
     transition: opacity 0.5s ease;
     cursor: pointer;
-   
 }
-.image_library img:hover {
-    opacity:0.4;
-    
-   
+
+.image-library img:hover {
+    opacity: 0.4;
 }
+
+/*customise "make post" icon*/
 .fa-circle-plus {
     color: var(--importantButton);
     transition: color 0.5s ease;
 }
+
 .fa-circle-plus:hover {
     color: var(--importantButtonHover);
 }
-.fa-2xl {
-    font-size: 5em;
-    padding: 0.5em 0;
-    margin:0.1em
-}
-.content_item {
+
+/*Apply border effects and width to any item that has content in it*/
+.content-item {
     border-radius: 0.5em;
-    border: solid var(--borderColor) 0.1em;
+    border: var(--border);
     padding: var(--paddingSpace);
     width: 100%;
     box-shadow: var(--boxShading);
 }
 
-
-
-
-
-
-
 /* NAVBAR CSS */
 .navbar { 
-    height:3em;
-    display:inline-flex;
+    height: 3em;
+    display: inline-flex;
     width: 100%;
-    border-bottom: solid var(--borderColor) 0.1em;
+    border-bottom: var(--border);
     justify-content: space-between;
     margin-bottom: var(--paddingSpace);
 }
+
 .navbarlogo {
     height: 3em;
-    padding: 0 5px;
+    padding: 0 0.1em;
 }
+
+/* format, size, and color the navbar icons*/
 li {
-    padding: 20px 30px;
-    display:inline-flex;
+    padding: 1.2em 2em;
+    display: inline-flex;
 }
-.fa-li {
+
+.fa-li, .fa-gears {
     color: var(--iconColor);
     transition: color 0.5s ease;
     justify-content: center;
-    text-align: center;
 }
+
 .fa-li:hover {
     color: var(--importantButtonHover);
 }
-#icon_of_page {
-    border-bottom: var(--iconColor) solid 2px;
+
+/* underline the icon of the current page */
+#icon-of-page {
+    border-bottom: var(--iconColor) solid 0.1em;
 }
+/*  */
 .navbar span {
     padding-bottom: 1em;
 }
+/*apply dimeensions for login button*/
 #login {
     padding: 0.6em 1em;
     margin: auto 0.5em auto 0;
 }
 
-
-
-
-
-
-
-/*  HOMEPAGE BODY CSS */
-#home_body_content {               /*BODY AND GRID FOR PAGE*/
+/*HOMEPAGE CSS*/
+/*Flex the settings box to the rest of the Homepage*/
+#home-body-content {               
     margin: auto var(--whiteSpace);
     display: flex;
     justify-content: center;
 }
-#home_grid {
+
+/*format "mini profile", "suggest" and "post" boxes into a grid*/
+#home-grid {
     margin-right: 4em;
-    display:grid;
+    display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 20% 45%;
     grid-column-gap: 2em;
     grid-row-gap: 2em;
-    height:82em;
+    height: 82em;
 }
-.mini_profile_box {                /*MINI PROFILE*/ /* */
+
+/*mini profile box general CSS*/
+.mini-profile-box {                
     display: inline-flex;
-    padding:var(--paddingSpace);
+    padding: var(--paddingSpace);
     text-align: center;
     min-width: 30em;
-    border: solid 0.1em var(--borderColor);
+    border: var(--border);
     border-radius: 0.5em;
     box-shadow: var(--boxShading);
     justify-content: space-around;
 }
-.mini_profile_item{
+
+/*center all items on y axis*/
+.mini-profile-item {
     margin: auto 0;
 }
-.mini_profile_item img{
+
+/*format profile image in mini profile*/
+.mini-profile-item img {
     border-radius: 100em;
-    width:10em;
-    height:10em;
-    border: solid 0.1em var(--borderColor);
-    margin:0.5em;
+    width: 10em;
+    height: 10em;
+    border: var(--border);
+    margin: 0.5em;
 }
-.fa-gears{
+
+/*format FontAwesome icons for mini profile*/
+.fa-gears {
     font-size: 2em;
-    color: var(--iconColor);
 }
-.post_box{                          /*POSTS BOX*/
+
+.fa-2xl {
+    font-size: 5em;
+    padding: 0.5em 0;
+    margin: 0.1em;
+}
+
+/*POSTS GENERAL CSS*/
+/*container for ".post"*/
+.post-box {                          
     overflow: scroll;
-    justify-content: center;
-    padding:1em;
+    padding: 1em;
 }
-.post{
-   border: solid 0.1em var(--borderColor);
+
+.post {
+   border: var(--border);
    border-radius: 1em;
    margin: 0 auto 2em auto;
-   padding:1em;
+   padding: 1em;
    box-shadow: var(--boxShading);
 }
-.post_title img {
-    width:2em;
-    height:2em;
-    border-radius: 100em;
-}
-.post_img {
-    height:25em;
-    margin:0.5em auto;
-}
-.post_title {
+
+/*format the top image and username of a post*/
+.post-title {
     display: inline-flex;
 }
-.post_title h4{
+
+.post-title h4 {
     margin: auto 0.4em;
 }
-#setting_items p {                  /*SETTINGS BOX*/
-    padding:0.5em 0;
+
+.post-title img {
+    width: 2em;
+    height: 2em;
+    border-radius: 100em;
+}
+
+/*set height of hero image*/
+.post-hero-img {
+    height: 25em;
+    margin: 0.5em 0;
+}
+
+/*SETTINGS GENERAL CSS*/
+#setting-items p {                  
+    padding: 0.5em 0;
     transition: all 0.5 ease;
 }
-#setting_items p:hover {
-    border-bottom:0.05em solid black;
+
+#setting-items p:hover {
+    border-bottom: 0.05em solid black;
 }
-.setting_box {
-    height:40em;
+
+.setting-box {
+    height: 40em;
     width: 30em;
     margin-right: 2em;
 }
+
+/*SETTINGS DROPDOWN CSS*/
 /* The dropdown container */
-.dropdown {                         /*SETTINGS DROPDOWN BOX*/
+.dropdown {                         
     float: left;
     overflow: hidden;
     display: none;
 }
+
 /* Dropdown button */
 .dropdown .dropbtn {
-    font-size: 16px;
     border: none;
-    outline: none;
     color: white;
-    padding: 14px 16px;
     background-color: inherit;
-
 }
+
+/*format dropdown content container*/
 .dropdown-content {
     display: none;
     border-radius: 1em;
@@ -244,230 +271,254 @@ li {
     background-color: white;
     width: 10em;
     height: fit-content;
-    z-index: 1;
     text-align: left;
 }
 
-/* when hovered, show dropdown menu */
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.suggest_box {                      /*SUGGEST BOX*/
+
+/*SUGGEST BOX GENERAL CSS*/
+/*fit suggest box into two grid spaces, limit width*/
+.suggest-box {                      
     grid-row: span 2;
     min-width: 15em;
-    overflow: scroll;
     text-align: center;
 }
-.suggest_user img {
-    height:7em;
-    width:7em;
+
+/*make images in suggest box circular and central*/
+.suggest-user img {
+    height: 7em;
+    width: 7em;
     border-radius: 100em;
-    margin:0.5em;
+    margin: 0.5em;
 }
-@media only screen and (max-width: 76em) {      /*MEDIA QUERIES FOR VARIOUS SCREEN SIZES*/
-    .dropdown{
+
+/*when the screen is < 76em, hide settings box on the left and show the setting dropdown menu*/
+@media only screen and (max-width: 76em) {      
+    .dropdown {
         display: block;
     }
-    .setting_box {
-        display:none;
+
+    .setting-box {
+        display: none;
     }
 }
+
+/*when the screen is < 60em, make the whole website vertical. centralise all objects.*/
 @media only screen and (max-width: 60em) {
-    #home_grid {
+    #home-grid {
         display: block;
     }
-    #suggest_scroll_area{
+
+    #suggest-scroll-area {
         display: inline-flex;
     }
-    .suggest_box{
+
+    .suggest-box {
         margin: var(--paddingSpace) 0;
     }
-    .mini_profile_box{
+
+    .mini-profile-box {
         width: 100%;
     }
-    #home_body_content{
-        width:0;
-        margin:auto;
-        justify-content: center;
+
+    .post-box {
+        margin-left: 3.5em;
+        height: 34em;
     }
-    .post_box{
-        margin-left: 2em;
-        height:34em;
-        justify-content: space-between;
-    }
-    
 }
 
-
-
-
-
-
-
-/*  PROFILEPAGE BODY CSS */
-#profile_body_content {
+/*PROFILEPAGE CSS*/
+/*align items to center of page*/
+#profile-body-content {
     margin: auto var(--whiteSpace);
     padding-right: 4em;
-    justify-content:center;
+    justify-content: center;
 }
-#profile_info {
+/*inline-flex all items in the profile information page*/
+#profile-info {
    display: inline-flex;
    margin-bottom: var(--paddingSpace);
    justify-content: space-around;
 }
-.profile_image {
-    margin: auto 0;
-}
-.profile_image img {
-    border: var(--borderColor) solid 0.3em;
-    border-radius: 20em;
-    height:10em;
-    width:10em;
+
+/*Make profile image circular*/
+.profile-image img {
+    border: var(--border);
+    border-radius: 100em;
+    height: 10em;
+    width: 10em;
     margin: 0.5em;
     transition: width 0.5s, height 0.5s;
 }
-.profile_item, .profile_item h4 {
+
+/*align friends list text to center, space out important buttons on far left*/
+.profile-item, .profile-item h4 {
     margin: auto;
     text-align: center;
 }
-#make_post h2 {
-    padding:0.2em 1em;
-    margin:1em;
+
+#make-post h2 {
+    padding: 0.2em 1em;
+    margin: 1em;
 }
+
+/*when screen width <48em, display the profile information as blocked, and reduce grid width to 3 pictures per row*/
 @media only screen and (max-width: 48em) {
-    .profile_image img {
-        height:5em;
-        width:5em;
+    .profile-image {
+        padding-bottom: 1em;
+    }
+
+    .profile-image img {
+        height: 5em;
+        width: 5em;
         border: var(--lightGray) solid 0.1em;
     }
-    #profile_info {
+
+    #profile-info {
         display: block;
     }
-    #profile_posts {
-        display:grid;
+
+    #profile-posts {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0.5em;
     }
 }
 
-
-
-
-
 /* EXPLOREPAGE BODY CSS */
-#explore_body_content {
+/*align content in explore page to center*/
+#explore-body-content {
     margin: auto var(--whiteSpace);
     justify-content: center;
     padding-right: 4em;
 }
-#explore_body_content .image_library{
+
+/*limit the height of the image library in the explore page to 45em*/
+#explore-body-content .image-library {
     height: 45em;
 }
-.big_pic {
+
+/*any image classed "big pic" will span two grid columns.*/
+.big-pic {
     grid-column: span 2;
 }
-.search_icon {
-    margin:1em;
+
+/*Search bar & search icon formatting*/
+.search-icon {
+    margin: 1em;
 }
-#search_bar .content_item {
-    padding:1em;
+
+#search-bar .content-item {
+    padding: 1em;
 }
-#search_bar {  
+
+#search-bar {  
     display: inline-flex;
-    width:100%;
+    width: 100%;
     margin-bottom: 2em;
 }
+
 .fa-magnifying-glass {
-    color:var(--iconColor)
+    color: var(--iconColor)
 }
+
+/*when screen size is < 60em, big pictures will only span 1 column 
+and grids will only be 3 columns wide.*/
 @media only screen and (max-width: 60em) {
-    .big_pic{
+    .big-pic {
         grid-column: span 1;
     }
-    .image_library {
-        display:grid;
+
+    .image-library {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0.5em;
     }
 }
+
+/*when screen width < 40em, the grid library will only be 2 columns wide*/
 @media only screen and (max-width: 40em) {
-    .big_pic {
+    .big-pic {
         grid-column: span 1;
     }
-    .image_library {
-        display:grid;
+
+    .image-library {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0.5em;
     }
 }
 
-
-
-
-
 /* MODALS */
+/*hide modal unless it's clicked on*/
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1; 
-    padding-top: 100px; 
+    padding-top: 7em; 
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0,0,0,0.7);
 }
+
+/*format modal image*/
 .modal-content {
     margin: auto;
     display: block;
     width: 100%;
-    height:80%;
-    max-width: 700px;
+    height: 80%;
+    max-width: 40em;
     animation-name: zoom;
     animation-duration: 0.6s;
 }
+
+/*animate modal to zoon*/
 @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
+    from {transform: scale(0)}
+    to {transform: scale(1)}
 }
+
+/*position & color close button*/
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 1.5em;
+    right: 1em;
     color: var(--importantButton);
-    font-size: 40px;
+    font-size: 2.5em;
     font-weight: bold;
     transition: 0.1s;
-} 
+}
+
 .close:hover, .close:focus {
     color: var(--importantButtonHover);
     text-decoration: none;
     cursor: pointer;
 }
 
-
-
-
-
-
 /*FOOTER*/
-footer{
+footer {
     padding: 1em 1em;
     margin-top: 3em;
     box-shadow: var(--boxShading);
 }
-#sources{
+
+#sources {
     display: flex;
     justify-content: space-around;
-    padding:2em 0;
+    padding: 2em 0;
 }
-#sources h3{
-    padding:0.2em 0;
+
+#sources h3 {
+    padding: 0.2em 0;
 }
-footer p{
+
+footer p {
     font-size: 0.8em;
 }
-#rights_reserved{
+
+#rights-reserved {
     text-align: center;
 }

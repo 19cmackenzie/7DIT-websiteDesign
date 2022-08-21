@@ -1,5 +1,5 @@
-var img = document.getElementsByClassName('modal_trigger');
-var modal = document.getElementById('myModal');
+var img = document.getElementsByClassName('modal-trigger');
+var modal = document.getElementById('my-modal');
 var modalImg = document.getElementById("modal-img");
 
 //put the image data of the clicked image into the modal div
