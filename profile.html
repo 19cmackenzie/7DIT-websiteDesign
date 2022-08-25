@@ -48,12 +48,12 @@
 </header>
 <body>
     <div id="profile-body-content">
-        <div class="content-item" id="profile-info">
-            <div class="profile-item profile-image">
-                <img src="images/mypfp.jpg" alt="your profile image">
-                <h4>7DIT-Account</h4>
+        <div class="content-item" id="profile-info">    <!--Profile infromation container-->
+            <div class="profile-item profile-image"> 
+                <img src="images/mypfp.jpg" alt="your profile image"> <!--profile image-->
+                <h4>7DIT-Account</h4> <!--Username-->
             </div>
-            <div class="profile-item" id="friends-counter">
+            <div class="profile-item"> <!--Friends-status-->
                 <h4>posts</h4>
                 <p>11</p>
                 <h4>friends</h4>
@@ -61,13 +61,13 @@
                 <h4>befriended</h4>
                 <p>4</p>
             </div>
-            <div class="profile-item" id='make-post'>
+            <div class="profile-item" id='make-post'> <!--Post, message & favourites buttons-->
                 <a href="profile.html"><h2 class="important-button">Favourites</h2></a>
                 <a href="profile.html"><i class="fa-solid fa-circle-plus fa-xl"></i></a>
                 <a href="profile.html"><h2 class="important-button">Message</h2></a>
             </div>
         </div>
-        <div class="content-item image-library" id="profile-posts">
+        <div class="content-item image-library" id="profile-posts"> <!--Post Image library-->
             <img class="modal-trigger" src="images/profilepic1.jpg" alt="a post by username">
             <img class="modal-trigger" src="images/profilepic2.jpg" alt="a post by username">
             <img class="modal-trigger" src="images/profilepic3.jpg" alt="a post by username">
@@ -80,14 +80,14 @@
             <img class="modal-trigger" src="images/profilepic10.jpg" alt="a post by username">
             <img class="modal-trigger" src="images/profilepic11.jpg" alt="a post by username">
         </div>
-        <div id="my-modal" class="modal">
+        <div id="my-modal" class="modal"> <!--modal container - inserts modal img data and displays here-->
             <span class="close">&times;</span>
             <img class="modal-content" id="modal-img">
         </div>
     </div>
 </body>
-<footer>
-    <div id="sources">
+<footer>    <!-- FOOTER -->
+    <div id="sources">  <!-- hyperlink unsplash & fontawesome-->
         <div>
             <h3>IMAGES SOURCED FROM</h3>
             <a href="https://unsplash.com/">
@@ -103,7 +103,7 @@
             <p>free to use icons for providing credit</p>
         </div>
     </div>
-    <div id="rights-reserved">
+    <div id="rights-reserved">  <!-- stating rights reserved for the website-->
         <p>
             All Rights reserved. this piece of work is protected by copyright 
             and therefore prohibits the distribution of this work without the 
@@ -111,5 +111,5 @@
         </p>
     </div>
 </footer>
-<script src="modal.js"></script>
 </html>
+
